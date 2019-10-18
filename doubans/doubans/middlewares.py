@@ -93,16 +93,13 @@ class RandomUserAgentMiddleware(object):
                     get_release_url()
 
         now = time.time()
-        if float(now) - float(expire_time) > 0:
-            old_ip = proxy_ip
-            proxy = get_proxy()
-            if old_ip == proxy:
-                # time.sleep(5)
-                # get_release_url()
-                # time.sleep(5)
-                proxy = get_proxy()
-            print("\n当前时间：%.2f, 过期时间 %.2f 时间差是 %d \n" % (now, expire_time, now - expire_time))
-        else:
-            proxy = proxy_ip
-        request.meta['proxy'] = proxy
+        # if float(now) - float(expire_time) > 0:
+        #     old_ip = proxy_ip
+        #     proxy = get_proxy()
+        #     if old_ip == proxy:
+        #         proxy = get_proxy()
+        #     print("\n当前时间：%.2f, 过期时间 %.2f 时间差是 %d \n" % (now, expire_time, now - expire_time))
+        # else:
+        #     proxy = proxy_ip
+        # request.meta['proxy'] = proxy
         request.headers.setdefault('User-Agent', get_ua())

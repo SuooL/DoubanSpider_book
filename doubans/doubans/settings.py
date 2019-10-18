@@ -40,9 +40,9 @@ NEWSPIDER_MODULE = 'doubans.spiders'
 # MYSQL_PASSWD = '1992@Hzj'
 
 MYSQL_HOST = 'localhost'
-MYSQL_DBNAME = 'iRead'
+MYSQL_DBNAME = 'Douban'
 MYSQL_USER = 'root'
-MYSQL_PASSWD = 'PASSWORD'
+MYSQL_PASSWD = '12345!@#$%'
 
 DOWNLOAD_DELAY = 1
 

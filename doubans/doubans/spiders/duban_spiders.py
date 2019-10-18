@@ -19,7 +19,7 @@ class BookSpider(scrapy.Spider):
 
     logger.info("开始抓取")
     start_urls = []
-    for index in range(13582, 16784):
+    for index in range(10000, 10010):
         book_url = "https://book.douban.com/subject/" + str(1000001+index) + '/'
         start_urls.append(book_url)
 
